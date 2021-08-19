@@ -1,12 +1,12 @@
-## 关于M1芯片的MAC完美使用Emby-Theater-Electron的方法
+# 关于M1芯片的MAC完美使用Emby-Theater-Electron的方法
 
 相信有部分M1用户在使用Emby-Theater-Electron (以下简称ETE) 的时候都出现过服务器的影视库加载正常，却没有办法正常播放视频，且表现为无限加载+网速为0的情况，然而在外挂了播放器 (如IINA) 后却能正常播放
 
-### 原因分析：
+## 原因分析：
 
 由于 ETE 需要**调用mpv视频播放器**对 HEVC 视频内容进行解码，因此需要在使用 Homebrew 来安装 mpv 播放器。但是由于 Homebrew 修改了对M1芯片的Mac安装路径，从原来的**`/usr/local/Homebrew `**变成了**`/opt/homebrew`**。而 ETE (latest version 3.0.15) 依然不支持新的路径，也就导致了 ETE 无法播放视频，表现为在视频无限加载却没有速度
 
-### 配置&解决方法：
+## 配置&解决方法：
 
 在 M1 的 Mac下加装一个 x86 下的 Homebrew ，在**`/usr/local`**的路径下安装 mpv 播放器，方法来源 [@PlatyHsu](https://sspai.com/post/63935)
 
@@ -18,7 +18,7 @@
 
   应用源码：*https://github.com/thura10/emby-theater-electron*
 
-- 安装mpv播放器
+- ### 安装mpv播放器
 
   1. 首先我们要在 M1 的 mac下安装 x86 版本的 Homebrew
 
@@ -48,7 +48,7 @@
      arch -x86_64 /usr/local/bin/brew install --HEAD mpv
      ```
 
-- 替换 libass，使字幕显示完美
+- ### 替换 libass，使字幕显示完美
 
   由于上面安装的 `libmpv` 对于某些中文字幕会乱码，所以给出一个解决办法。( 原因: https://zrstea.com/261/ )
 
@@ -68,7 +68,7 @@
 
      *以上三个步骤源方案来至: [@PANINI](https://t.me/PAN1N1) 和 [@xinzhe he](https://t.me/hexinzhe)*
 
-- 客户端解锁
+- ### 客户端解锁
 
   1. 在**`Application(应用程序)`**文件夹中找到 **`Emby Theater.app`**，右键 **`show contens(显示内容)`**。找到**`Contents/Resources/app/main.js`**文件，用编辑器 (VScode) 打开
 

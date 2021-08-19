@@ -12,7 +12,7 @@
 
 同时感谢 [@rartv](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 提供的对于 mac 配置 ETE 的编译与教程
 
-- 下载并安装ETE
+- ### 下载并安装ETE
 
   下载 [EmbyTheater.zip](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 解压出**`Emby Theater.app`**文件，拖到**`Application(应用程序)`**文件夹中
 

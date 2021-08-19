@@ -4,17 +4,17 @@
 
 ## 原因分析：
 
-由于 ETE 需要**调用mpv视频播放器**对 HEVC 视频内容进行解码，因此需要在使用 Homebrew 来安装 mpv 播放器。但是由于 Homebrew 修改了对M1芯片的Mac安装路径，从原来的** `/usr/local/Homebrew `** 变成了 **`/opt/homebrew`**。而 ETE (latest version 3.0.15) 依然不支持新的路径，也就导致了 ETE 无法播放视频，表现为在视频无限加载却没有速度
+由于 ETE 需要**调用mpv视频播放器**对 HEVC 视频内容进行解码，因此需要在使用 Homebrew 来安装 mpv 播放器。但是由于 Homebrew 修改了对M1芯片的Mac安装路径，从原来的`/usr/local/Homebrew `变成了`/opt/homebrew`。而 ETE (latest version 3.0.15) 依然不支持新的路径，也就导致了 ETE 无法播放视频，表现为在视频无限加载却没有速度
 
 ## 配置&解决方法：
 
-在 M1 的 Mac下加装一个 x86 下的 Homebrew ，在**`/usr/local`**的路径下安装 mpv 播放器，方法来源 [@PlatyHsu](https://sspai.com/post/63935)
+在 M1 的 Mac下加装一个 x86 下的 Homebrew ，在`/usr/local`的路径下安装 mpv 播放器，方法来源 [@PlatyHsu](https://sspai.com/post/63935)
 
 同时感谢 [@rartv](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 提供的对于 mac 配置 ETE 的编译与教程
 
 - ### 下载并安装ETE
 
-  下载 [EmbyTheater.zip](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 解压出**`Emby Theater.app`**文件，拖到**`Application(应用程序)`**文件夹中
+  下载 [EmbyTheater.zip](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 解压出`Emby Theater.app`文件，拖到`Application(应用程序)`文件夹中
 
   应用源码：*https://github.com/thura10/emby-theater-electron*
 
@@ -40,7 +40,7 @@
 
   2. 在 x86 的 Homebrew 下安装 mpv 播放器
 
-     如果你的电脑上面安装了两个不同版本不同路径的 Homebrew 推荐在使用 x86 版本的 Homebrew 时使用此命令**`arch -x86_64 /usr/local/bin/brew`**
+     如果你的电脑上面安装了两个不同版本不同路径的 Homebrew 推荐在使用 x86 版本的 Homebrew 时使用此命令`arch -x86_64 /usr/local/bin/brew`
 
      因此，如果要在 x86 的 Homebrew 路径下安装 mpv 播放器，请输入
 
@@ -54,9 +54,9 @@
 
   1. 下载 [libass.rb](https://github.com/rartv/EmbyPublic/releases/download/0.0.33/libass.rb) 这个文件
 
-  2. 进入下载目录，假设为 **`~/Downloads`**，那么就在终端输入 **`cd ~/Downloads`**
+  2. 进入下载目录，假设为`~/Downloads`，那么就在终端输入`cd ~/Downloads`
 
-  3. 卸载 x86 下安装 `libmpv` 时安装的 `libass` ，然后重新编译并安装，命令如下，请分开执行2次指令
+  3. 卸载 x86 下安装`libmpv`时安装的`libass`，然后重新编译并安装，命令如下，请分开执行2次指令
 
      ```
      arch -x86_64 /usr/local/bin/brew uninstall libass --ignore-dependencies && arch -x86_64 /usr/local/bin/brew install fontconfig 
@@ -70,9 +70,9 @@
 
 - ### 客户端解锁
 
-  1. 在**`Application(应用程序)`**文件夹中找到 **`Emby Theater.app`**，右键 **`show contens(显示内容)`**。找到**`Contents/Resources/app/main.js`**文件，用编辑器 (VScode) 打开
+  1. 在**`Application(应用程序)`**文件夹中找到`Emby Theater.app`，右键`show contens(显示内容)`。找到`Contents/Resources/app/main.js`文件，用编辑器 (VScode) 打开
 
-  2. 用 **`cmd+f`** 搜索找到
+  2. 用`cmd+f`搜索找到
 
      ```
          function getAppBaseUrl() {

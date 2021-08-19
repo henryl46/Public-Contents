@@ -4,7 +4,7 @@
 
 ## 原因分析：
 
-由于 ETE 需要**调用mpv视频播放器**对 HEVC 视频内容进行解码，因此需要在使用 Homebrew 来安装 mpv 播放器。但是由于 Homebrew 修改了对M1芯片的Mac安装路径，从原来的** `/usr/local/Homebrew ` **变成了**`/opt/homebrew`**。而 ETE (latest version 3.0.15) 依然不支持新的路径，也就导致了 ETE 无法播放视频，表现为在视频无限加载却没有速度
+由于 ETE 需要**调用mpv视频播放器**对 HEVC 视频内容进行解码，因此需要在使用 Homebrew 来安装 mpv 播放器。但是由于 Homebrew 修改了对M1芯片的Mac安装路径，从原来的** `/usr/local/Homebrew `** 变成了 **`/opt/homebrew`**。而 ETE (latest version 3.0.15) 依然不支持新的路径，也就导致了 ETE 无法播放视频，表现为在视频无限加载却没有速度
 
 ## 配置&解决方法：
 

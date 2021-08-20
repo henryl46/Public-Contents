@@ -95,20 +95,8 @@
              return url;
          }
      ```
-
-     或
-
-     ```
-         function getAppBaseUrl() {
-     
-             var url = 'https://theater.embypremiere.workers.dev';
-     
-             //url = 'http://localhost:8088';
-             return url;
-         }
-     ```
      
      保存即可正常享用
 
-     *解锁方法来源：[@喵时光](https://t.me/CassiniWithHuygens) @Arcade*
+     *解锁方法来源：[@喵时光](https://t.me/CassiniWithHuygens)*
 

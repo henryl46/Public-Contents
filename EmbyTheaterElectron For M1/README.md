@@ -98,5 +98,5 @@
 
      保存即可正常享用
 
-     *解锁方法来源：@[喵时光](https://t.me/CassiniWithHuygens)*
+     *解锁方法来源：[@喵时光](https://t.me/CassiniWithHuygens)*
 

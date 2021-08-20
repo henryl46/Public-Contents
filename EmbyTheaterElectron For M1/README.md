@@ -89,7 +89,7 @@
      ```
          function getAppBaseUrl() {
      
-             var url = 'https://tv.emby.neko.re';
+             var url = 'http://embycrack.tk';
      
              //url = 'http://localhost:8088';
              return url;
@@ -98,5 +98,5 @@
 
      保存即可正常享用
 
-     *解锁方法来源：https://neko.re/archives/225.html*
+     *解锁方法来源：@[喵时光](https://t.me/CassiniWithHuygens)*
 

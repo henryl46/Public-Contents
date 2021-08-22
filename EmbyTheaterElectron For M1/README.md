@@ -10,7 +10,7 @@
 
 在 M1 的 Mac下加装一个 x86 下的 Homebrew ，在 `/usr/local` 的路径下安装 mpv 播放器，方法来源 [@PlatyHsu](https://sspai.com/post/63935)
 
-同时感谢 [@rartv](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 提供的对于 mac 配置 ETE 的编译与教程
+同时感谢 [@rartv](https://github.com/rartv/EmbyPublic/tree/test/Emby%20Theater) 提供的对于 intel mac 配置 ETE 的编译与教程
 
 - ### 下载并安装 ETE
 

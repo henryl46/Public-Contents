@@ -2,11 +2,11 @@
 
 相信有部分 M1 用户在使用 Emby-Theater-Electron (以下简称ETE) 的时候都出现过服务器的影视库加载正常，却没有办法正常播放视频，且表现为**无限加载**与**网速为0**的情况，然而在外挂了播放器 (如IINA) 后却能正常播放
 
-## 原因分析：
+## 原因分析
 
 由于 ETE 需要**调用 mpv 视频播放器**对 HEVC 视频内容进行解码，因此需要在使用 Homebrew 来安装 mpv 播放器。但是由于 Homebrew 修改了对M1芯片的Mac安装路径，从原来的 `/usr/local/Homebrew` 变成了 `/opt/homebrew` 。而 ETE (latest version 3.0.15) 依然不支持新的路径，也就导致了 ETE 无法播放视频，表现为在视频无限加载却没有速度
 
-## 配置&解决方法：
+## 配置&解决方法
 
 在 M1 的 Mac下加装一个 x86 下的 Homebrew ，在 `/usr/local` 的路径下安装 mpv 播放器，方法来源 [@PlatyHsu](https://sspai.com/post/63935)
 
